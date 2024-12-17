@@ -1,0 +1,30 @@
+# HTML-шаблон для отображения данных
+    html_template = """
+    <!doctype html>
+    <html>
+        <head>
+            <title>Список подарков</title>
+        </head>
+        <body>
+            <h1>Список подарков</h1>
+            <table border="1">
+                <tr>
+                    <th>id</th>
+                    <th>ФИО</th>
+                    <th>Подарок</th>
+                    <th>Стоимость</th>
+                    <th>Статус</th>
+                </tr>
+                {% for gift in gifts %}
+                <tr>
+                    <td>{{ gift[0] }}</td>
+                    <td>{{ gift[1] }}</td>
+                    <td>{{ gift[2] }}</td>
+                    <td>{{ gift[3] }}</td>
+                    <td>{{ gift[4] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </body>
+    </html>
+    """
